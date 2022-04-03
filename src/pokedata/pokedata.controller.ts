@@ -1,10 +1,13 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
 import { PokedataService } from '../service/pokedata/pokedata.service';
 @Controller('pokedata')
 export class PokedataController {
   constructor(private pokeDataService: PokedataService) {}
   @Get('pokemon/:offset/:limit')
-  getPokemon(@Param('offset') offset: string, @Param('limit') limit: string) {
+  getPokemon(
+    @Param('offset', ParseIntPipe) offset: number,
+    @Param('limit', ParseIntPipe) limit: number,
+  ) {
     return this.pokeDataService.getPokemonName(offset, limit);
   }
 }
