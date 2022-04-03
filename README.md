@@ -71,3 +71,10 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## Amélioraion de l'application
+
+- Mettre en place une base de donnée avec un ORM, pour faciliter les appels API.
+- Si les données sont stocké dans une base donnée cela facilite les appels avec Apollo , pour que on puissent bien identifier les propriété et type de donnée de chaque colonne et que on puissent appeler via une serveur de base de donnée.
+
+Nest is [MIT licensed](LICENSE).
